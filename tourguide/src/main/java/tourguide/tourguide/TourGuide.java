@@ -24,6 +24,9 @@ import net.i2p.android.ext.floatingactionbutton.FloatingActionButton;
  * Created by tanjunrong on 2/10/15.
  */
 public class TourGuide {
+
+    public static final int BASE_ADJUSTMENT = 30;
+
     /**
      * This describes the animation techniques
      * */
@@ -304,7 +307,7 @@ public class TourGuide {
 
             Point resultPoint = new Point(); // this holds the final position of tooltip
             float density = mActivity.getResources().getDisplayMetrics().density;
-            final float adjustment = 10 * density; //adjustment is that little overlapping area of tooltip and targeted button
+            final float adjustment = BASE_ADJUSTMENT * density; //adjustment is that little overlapping area of tooltip and targeted button
 
             // calculate x position, based on gravity, tooltipMeasuredWidth, parent max width, x position of target view, adjustment
             if (toolTipMeasuredWidth > parent.getWidth()){
